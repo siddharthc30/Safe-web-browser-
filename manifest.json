@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2 ,
+    "name": "Safe web surfing",
+    "version": "1.0",
+    "description":"Replaces disturbing images ",
+    
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+        "js":      ["content.js"]
+    }],
+
+    "icons": {
+        "16": "pic1.png",
+        "48": "pic3.png",
+        "128":"pic2.png"
+    } 
+
+
+    
+} 
