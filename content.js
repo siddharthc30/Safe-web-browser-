@@ -1,1 +1,4 @@
-console.log("safe web browsing is working");
+let images = document.getElementsByTagName('img');
+for(let i = 0; i < images.length; i++){
+  
+}
