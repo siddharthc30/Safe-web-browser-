@@ -1,21 +1,29 @@
-{
-    "manifest_version": 2 ,
-    "name": "Safe web surfing",
-    "version": "1.0",
-    "description":"Replaces disturbing images ",
+{ 
+    "manifest_version" : 2, 
+    "name" : "Replaces disturbing gorey images", 
+    "version" : "0.1", 
+    "web_accessible_resources" :[ 
+    "images/*.jpg"
+    ],
     
-    "content_scripts": [{
-        "matches": ["<all_urls>"],
-        "all_frames": true,
-        "js":      ["content.js"]
-    }],
-
     "icons": {
         "16": "pic1.png",
         "48": "pic3.png",
         "128":"pic2.png"
-    } 
-
-
-    
-} 
+    },
+     
+     "background" : { 
+    "scripts" : ["background.js"]
+     }, 
+    "browser_action" : { 
+    "default_icon" : "pic1.png"
+    },
+     "content_scripts" : [
+    { 
+    "matches" : [ 
+    "<all_urls>"
+    ], 
+    "js" : ["content.js"]
+    }
+    ]
+}
